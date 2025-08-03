@@ -84,7 +84,7 @@ class BertClassifier(BaseEstimator, ClassifierMixin):
 
 def setup_logging():
     """Setup comprehensive logging configuration"""
-    log_filename = f"ml_pipeline_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
+    log_filename = f"output/logs/ml_pipeline_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
 
     logging.basicConfig(
         level=logging.INFO,
@@ -119,7 +119,7 @@ def load_and_preprocess_data():
     """Load and preprocess the dataset"""
     logger.info("Loading dataset...")
     try:
-        data = pd.read_csv("training_dataset.csv")
+        data = pd.read_csv("dataset/training.dataset.csv")
         logger.info(
             f"Dataset loaded successfully: {data.shape[0]} rows, {data.shape[1]} columns")
 
@@ -131,13 +131,13 @@ def load_and_preprocess_data():
             logger.info(f"After removing missing values: {data.shape[0]} rows")
 
         X = data["description"]
-        y = data["title"]
+        y = data["category"]
 
         if len(X) == 0 or len(y) == 0:
             raise ValueError("Dataset is empty after preprocessing")
 
         logger.info(f"Total samples: {len(X)}")
-        logger.info(f"Unique job titles: {y.nunique()}")
+        logger.info(f"Unique job category: {y.nunique()}")
         logger.info(
             f"Average description length: {X.str.len().mean():.1f} characters")
 
@@ -761,7 +761,7 @@ def create_comprehensive_visualization(results, cv_results, history=None):
         plt.tight_layout()
 
         # Save the comprehensive plot
-        plot_filename = f"comprehensive_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
+        plot_filename = f"output/comprehensive_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
         plt.savefig(plot_filename, dpi=300, bbox_inches='tight')
         plt.show()
 
@@ -805,7 +805,7 @@ def create_confusion_matrix_plot(y_true, y_pred, label_encoder, model_name):
         plt.yticks(rotation=0)
         plt.tight_layout()
 
-        cm_filename = f"confusion_matrix_{model_name.replace(' ', '_')}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
+        cm_filename = f"output/confusion_matrix_{model_name.replace(' ', '_')}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
         plt.savefig(cm_filename, dpi=300, bbox_inches='tight')
         plt.show()
 
@@ -982,13 +982,13 @@ def main():
 
     try:
         setup_environment()
-        logger.info("🚀 Starting Enhanced ML Pipeline")
-        bertTrainer = BertTrainer(csv_path="job_output.csv")
-        bertTrainer.train_model()
-        logger.info("BertTrainer Train data")
-        roBERTaTrainer = RoBERTaTrainer(csv_path="job_output.csv")
-        roBERTaTrainer.train_model()
-        logger.info("roBERTaTrainer Train data")
+        logger.info("Starting Enhanced ML Pipeline")
+        # bertTrainer = BertTrainer(csv_path="dataset/training.dataset.csv")
+        # bertTrainer.train_model()
+        # logger.info("BertTrainer Train data")
+        # roBERTaTrainer = RoBERTaTrainer(csv_path="dataset/training.dataset.csv")
+        # roBERTaTrainer.train_model()
+        # logger.info("roBERTaTrainer Train data")
 
         X, y = load_and_preprocess_data()
 

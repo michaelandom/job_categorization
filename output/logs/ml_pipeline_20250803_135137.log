@@ -1,0 +1,64 @@
+INFO:__main__:=== Enhanced ML Pipeline Starting ===
+INFO:__main__:Set multiprocessing start method to 'spawn'
+INFO:__main__:Starting Enhanced ML Pipeline
+INFO:__main__:Loading dataset...
+INFO:__main__:Dataset loaded successfully: 217704 rows, 3 columns
+INFO:__main__:Total samples: 217704
+INFO:__main__:Unique job titles: 11
+INFO:__main__:Average description length: 2061.8 characters
+INFO:__main__:load_and_preprocess_data completed in 4.35 seconds
+INFO:__main__:Enhanced data preparation with ratios - Train: 0.7, Val: 0.15, Test: 0.15
+INFO:__main__:Original classes: 11
+INFO:__main__:Class distribution (top 10):
+category
+other                                       173087
+Software Development / Engineering           24628
+IT / Systems Engineering                      7079
+Data Engineering                              2581
+UI/UX / Design (Tech-Oriented)                2271
+Product / Project Management (Technical)      2195
+AI                                            1683
+QA / Testing                                  1495
+Cybersecurity / InfoSec                       1471
+DevOps / Site Reliability Engineering         1157
+Name: count, dtype: int64
+INFO:__main__:Final number of classes: 11
+INFO:__main__:Data split sizes:
+INFO:__main__:  Training set: 152392 (70.0%)
+INFO:__main__:  Validation set: 32656 (15.0%)
+INFO:__main__:  Test set: 32656 (15.0%)
+INFO:__main__:  Train set classes: 11
+INFO:__main__:  Val set classes: 11
+INFO:__main__:  Test set classes: 11
+INFO:__main__:prepare_features_enhanced completed in 0.11 seconds
+INFO:__main__:Creating enhanced TF-IDF vectors...
+INFO:__main__:TF-IDF matrix shapes:
+INFO:__main__:  Train: (152392, 2000)
+INFO:__main__:  Validation: (32656, 2000)
+INFO:__main__:  Test: (32656, 2000)
+INFO:__main__:  Total vocabulary size: 2000
+INFO:__main__:vectorize_text_enhanced completed in 154.06 seconds
+INFO:__main__:Performing 5-fold cross-validation...
+INFO:__main__:Cross-validating Logistic Regression...
+INFO:__main__:Logistic Regression CV Results:
+INFO:__main__:  Accuracy: 0.9276 (+/- 0.0036)
+INFO:__main__:  F1-Macro: 0.7125 (+/- 0.0225)
+INFO:__main__:Cross-validating Random Forest...
+INFO:__main__:Random Forest CV Results:
+INFO:__main__:  Accuracy: 0.9318 (+/- 0.0031)
+INFO:__main__:  F1-Macro: 0.6574 (+/- 0.0204)
+INFO:__main__:Cross-validating Naive Bayes...
+INFO:__main__:Naive Bayes CV Results:
+INFO:__main__:  Accuracy: 0.7841 (+/- 0.0057)
+INFO:__main__:  F1-Macro: 0.4499 (+/- 0.0190)
+INFO:__main__:Cross-validating XGBoost...
+INFO:__main__:XGBoost CV Results:
+INFO:__main__:  Accuracy: 0.9450 (+/- 0.0035)
+INFO:__main__:  F1-Macro: 0.7496 (+/- 0.0460)
+INFO:__main__:Cross-validating KNN...
+INFO:__main__:KNN CV Results:
+INFO:__main__:  Accuracy: 0.9070 (+/- 0.0032)
+INFO:__main__:  F1-Macro: 0.6145 (+/- 0.0179)
+INFO:__main__:perform_cross_validation completed in 3168.60 seconds
+INFO:__main__:Performing hyperparameter tuning...
+INFO:__main__:Tuning Logistic Regression...
