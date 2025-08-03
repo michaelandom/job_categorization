@@ -3,8 +3,8 @@
 ## Overview
 
 This project contains three main components:
-- `code/job_classifier.py` – Trains and runs a job classification model.
 - `code/scraper.py` – Scrapes job-related data for training/testing.
+- `trainer/job_classifier.py` – Trains and runs a job classification model.
 - Displays all images from the `output/` folder.
 
 
