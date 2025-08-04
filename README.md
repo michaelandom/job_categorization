@@ -41,3 +41,15 @@ Install all required packages using `requirements.txt`:
 python3.12 -m pip install -r requirements.txt
 
 
+## Run
+
+### Scraper
+
+```bash
+python3.12 code/scraper.py
+
+
+### Trainer
+
+```bash
+python3.12 trainer/job_classifier.py
