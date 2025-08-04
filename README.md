@@ -39,7 +39,7 @@ Install all required packages using `requirements.txt`:
 
 ```bash
 python3.12 -m pip install -r requirements.txt
-
+```
 
 ## Run
 
@@ -47,9 +47,10 @@ python3.12 -m pip install -r requirements.txt
 
 ```bash
 python3.12 code/scraper.py
-
+```
 
 ### Trainer
 
 ```bash
 python3.12 trainer/job_classifier.py
+```
