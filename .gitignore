@@ -9,4 +9,5 @@
 /bert_output_micros/
 /.venv/
 /__pycache__/
+*/__pycache__
 session.session
