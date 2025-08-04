@@ -1,0 +1,116 @@
+================================================================================
+COMPREHENSIVE ML PIPELINE PERFORMANCE REPORT
+================================================================================
+Generated on: 2025-08-04 09:05:53
+Total number of classes: 11
+
+CROSS-VALIDATION RESULTS
+----------------------------------------
+Logistic Regression:
+  Accuracy: 0.9276 (+/- 0.0036)
+  F1-Macro: 0.7125 (+/- 0.0225)
+
+Random Forest:
+  Accuracy: 0.9318 (+/- 0.0031)
+  F1-Macro: 0.6574 (+/- 0.0204)
+
+Naive Bayes:
+  Accuracy: 0.7841 (+/- 0.0057)
+  F1-Macro: 0.4499 (+/- 0.0190)
+
+XGBoost:
+  Accuracy: 0.9450 (+/- 0.0035)
+  F1-Macro: 0.7496 (+/- 0.0460)
+
+KNN:
+  Accuracy: 0.9070 (+/- 0.0032)
+  F1-Macro: 0.6145 (+/- 0.0179)
+
+TEST SET PERFORMANCE
+----------------------------------------
+XGBoost_Tuned:
+  Accuracy: 0.9489
+  Precision (macro): 0.8854
+  Recall (macro): 0.7513
+  F1-Score (macro): 0.8037
+  F1-Score (weighted): 0.9475
+  Training Time: 560.78s
+
+XGBoost:
+  Accuracy: 0.9467
+  Precision (macro): 0.8804
+  Recall (macro): 0.7504
+  F1-Score (macro): 0.8012
+  F1-Score (weighted): 0.9452
+  Training Time: 283.48s
+
+Deep Learning:
+  Accuracy: 0.9463
+  Precision (macro): 0.7822
+  Recall (macro): 0.7243
+  F1-Score (macro): 0.7499
+  F1-Score (weighted): 0.9452
+  Training Time: 0.00s
+
+Random Forest_Tuned:
+  Accuracy: 0.9362
+  Precision (macro): 0.9029
+  Recall (macro): 0.6120
+  F1-Score (macro): 0.6921
+  F1-Score (weighted): 0.9315
+  Training Time: 784.14s
+
+Random Forest:
+  Accuracy: 0.9355
+  Precision (macro): 0.8984
+  Recall (macro): 0.6090
+  F1-Score (macro): 0.6889
+  F1-Score (weighted): 0.9308
+  Training Time: 429.39s
+
+Logistic Regression_Tuned:
+  Accuracy: 0.9309
+  Precision (macro): 0.7917
+  Recall (macro): 0.7640
+  F1-Score (macro): 0.7767
+  F1-Score (weighted): 0.9293
+  Training Time: 4693.94s
+
+Logistic Regression:
+  Accuracy: 0.9288
+  Precision (macro): 0.7746
+  Recall (macro): 0.6774
+  F1-Score (macro): 0.7199
+  F1-Score (weighted): 0.9258
+  Training Time: 23.16s
+
+KNN:
+  Accuracy: 0.9079
+  Precision (macro): 0.7761
+  Recall (macro): 0.5872
+  F1-Score (macro): 0.6349
+  F1-Score (weighted): 0.9024
+  Training Time: 606.23s
+
+Naive Bayes:
+  Accuracy: 0.7857
+  Precision (macro): 0.5159
+  Recall (macro): 0.5380
+  F1-Score (macro): 0.4468
+  F1-Score (weighted): 0.8022
+  Training Time: 0.17s
+
+CLUSTERING ANALYSIS
+----------------------------------------
+KMeans_ARI: 0.0143
+KMeans_Silhouette: 0.0465
+DBSCAN_ARI: 0.0005
+DBSCAN_Silhouette: 0.6190
+
+RECOMMENDATIONS
+----------------------------------------
+Best performing model: XGBoost_Tuned
+Best test accuracy: 0.9489
+Excellent performance achieved!
+
+================================================================================

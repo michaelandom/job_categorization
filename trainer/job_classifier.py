@@ -38,6 +38,7 @@ import warnings
 import torch
 from bert_trainer import BertTrainer
 from roberta_trainer import RoBERTaTrainer
+import joblib
 warnings.filterwarnings('ignore')
 
 
@@ -1045,7 +1046,7 @@ def main():
         best_model_name = max(results.keys(),
                               key=lambda x: results[x]['test']['accuracy'] if 'test' in results[x] else 0)
 
-        logger.info(f"\n🏆 Best Model: {best_model_name}")
+        logger.info(f"\n Best Model: {best_model_name}")
         logger.info(
             f"   Test Accuracy: {results[best_model_name]['test']['accuracy']:.4f}")
         logger.info(
@@ -1073,13 +1074,17 @@ def main():
             best_model_name, trained_models, dl_model, dl_metrics,
             tfidf, label_encoder, new_job_example
         )
+        os.makedirs("models", exist_ok=True)
+        joblib.dump(trained_models[best_model_name], "models/best_model.pkl")
+        joblib.dump(tfidf, "models/tfidf_vectorizer.pkl")
+        joblib.dump(label_encoder, "models/label_encoder.pkl")
 
         total_time = time.time() - total_start_time
         logger.info(
             f"\n Total Enhanced Pipeline Execution Time: {total_time:.2f} seconds")
-        logger.info("🎉 Enhanced ML Pipeline Completed Successfully!")
+        logger.info("Enhanced ML Pipeline Completed Successfully!")
         logger.info(
-            "📊 Check generated files for detailed results and visualizations")
+            "Check generated files for detailed results and visualizations")
 
         return {
             'results': results,

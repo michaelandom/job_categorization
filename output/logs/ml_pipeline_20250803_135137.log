@@ -62,3 +62,214 @@ INFO:__main__:  F1-Macro: 0.6145 (+/- 0.0179)
 INFO:__main__:perform_cross_validation completed in 3168.60 seconds
 INFO:__main__:Performing hyperparameter tuning...
 INFO:__main__:Tuning Logistic Regression...
+INFO:__main__:Best LR CV score: 0.7334
+INFO:__main__:Tuning Random Forest...
+INFO:__main__:Best RF params: {'n_estimators': 200, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_depth': None}
+INFO:__main__:Best RF CV score: 0.6526
+INFO:__main__:Tuning XGBoost...
+INFO:__main__:Best XGB params: {'subsample': 1.0, 'n_estimators': 100, 'max_depth': 9, 'learning_rate': 0.2}
+INFO:__main__:Best XGB CV score: 0.7477
+INFO:__main__:hyperparameter_tuning completed in 24663.30 seconds
+INFO:__main__:Training and evaluating models with comprehensive metrics...
+INFO:__main__:Training and evaluating Logistic Regression...
+INFO:__main__:Logistic Regression Results:
+INFO:__main__:  Validation - Accuracy: 0.9273, F1-Macro: 0.7215
+INFO:__main__:  Test - Accuracy: 0.9288, F1-Macro: 0.7199
+INFO:__main__:  Training time: 23.16s
+INFO:__main__:Training and evaluating Random Forest...
+INFO:__main__:Random Forest Results:
+INFO:__main__:  Validation - Accuracy: 0.9330, F1-Macro: 0.6672
+INFO:__main__:  Test - Accuracy: 0.9355, F1-Macro: 0.6889
+INFO:__main__:  Training time: 429.39s
+INFO:__main__:Training and evaluating Naive Bayes...
+INFO:__main__:Naive Bayes Results:
+INFO:__main__:  Validation - Accuracy: 0.7847, F1-Macro: 0.4424
+INFO:__main__:  Test - Accuracy: 0.7857, F1-Macro: 0.4468
+INFO:__main__:  Training time: 0.17s
+INFO:__main__:Training and evaluating XGBoost...
+INFO:__main__:XGBoost Results:
+INFO:__main__:  Validation - Accuracy: 0.9463, F1-Macro: 0.7911
+INFO:__main__:  Test - Accuracy: 0.9467, F1-Macro: 0.8012
+INFO:__main__:  Training time: 283.48s
+INFO:__main__:Training and evaluating KNN...
+INFO:__main__:KNN Results:
+INFO:__main__:  Validation - Accuracy: 0.9041, F1-Macro: 0.6105
+INFO:__main__:  Test - Accuracy: 0.9079, F1-Macro: 0.6349
+INFO:__main__:  Training time: 606.23s
+INFO:__main__:Training and evaluating Logistic Regression_Tuned...
+
+
+
+
+
+
+
+
+INFO:__main__:Logistic Regression_Tuned Results:
+INFO:__main__:  Validation - Accuracy: 0.9289, F1-Macro: 0.7517
+INFO:__main__:  Test - Accuracy: 0.9309, F1-Macro: 0.7767
+INFO:__main__:  Training time: 4693.94s
+INFO:__main__:Training and evaluating Random Forest_Tuned...
+
+
+INFO:__main__:Random Forest_Tuned Results:
+INFO:__main__:  Validation - Accuracy: 0.9336, F1-Macro: 0.6663
+INFO:__main__:  Test - Accuracy: 0.9362, F1-Macro: 0.6921
+INFO:__main__:  Training time: 784.14s
+INFO:__main__:Training and evaluating XGBoost_Tuned...
+INFO:__main__:XGBoost_Tuned Results:
+INFO:__main__:  Validation - Accuracy: 0.9475, F1-Macro: 0.7937
+INFO:__main__:  Test - Accuracy: 0.9489, F1-Macro: 0.8037
+INFO:__main__:  Training time: 560.78s
+INFO:__main__:train_and_evaluate_models completed in 7381.30 seconds
+INFO:__main__:Training enhanced deep learning model...
+INFO:__main__:Training neural network with validation...
+INFO:__main__:Deep Learning Results:
+INFO:__main__:  Test Accuracy: 0.9463
+INFO:__main__:  Test F1-Macro: 0.7499
+INFO:__main__:  Training stopped at epoch: 14
+INFO:__main__:train_deep_learning_model_enhanced completed in 210.58 seconds
+INFO:__main__:Performing enhanced clustering analysis...
+INFO:__main__:Running KMeans with 11 clusters...
+            
+INFO:__main__:KMeans - ARI: 0.0143, Silhouette: 0.0465
+INFO:__main__:Running DBSCAN clustering...
+
+
+
+INFO:__main__:DBSCAN (eps=0.3) - Clusters: 1398, Noise: 205674
+INFO:__main__:DBSCAN - ARI: 0.0005, Silhouette: 0.6190
+INFO:__main__:perform_clustering_enhanced completed in 13408.45 seconds
+INFO:__main__: Best Model: XGBoost_Tuned
+INFO:__main__:   Test Accuracy: 0.9489
+INFO:__main__:   Test F1-Macro: 0.8037
+INFO:__main__:Creating comprehensive visualizations...
+INFO:__main__:Comprehensive visualization saved as comprehensive_results_20250804_032808.png
+INFO:__main__:Confusion matrix saved as confusion_matrix_XGBoost_Tuned_20250804_090527.png
+INFO:__main__:Generating detailed performance report...
+INFO:__main__:================================================================================
+INFO:__main__:COMPREHENSIVE ML PIPELINE PERFORMANCE REPORT
+INFO:__main__:================================================================================
+INFO:__main__:Generated on: 2025-08-04 09:05:53
+INFO:__main__:Total number of classes: 11
+INFO:__main__:
+INFO:__main__:CROSS-VALIDATION RESULTS
+INFO:__main__:----------------------------------------
+INFO:__main__:Logistic Regression:
+INFO:__main__:  Accuracy: 0.9276 (+/- 0.0036)
+INFO:__main__:  F1-Macro: 0.7125 (+/- 0.0225)
+INFO:__main__:
+INFO:__main__:Random Forest:
+INFO:__main__:  Accuracy: 0.9318 (+/- 0.0031)
+INFO:__main__:  F1-Macro: 0.6574 (+/- 0.0204)
+INFO:__main__:
+INFO:__main__:Naive Bayes:
+INFO:__main__:  Accuracy: 0.7841 (+/- 0.0057)
+INFO:__main__:  F1-Macro: 0.4499 (+/- 0.0190)
+INFO:__main__:
+INFO:__main__:XGBoost:
+INFO:__main__:  Accuracy: 0.9450 (+/- 0.0035)
+INFO:__main__:  F1-Macro: 0.7496 (+/- 0.0460)
+INFO:__main__:
+INFO:__main__:KNN:
+INFO:__main__:  Accuracy: 0.9070 (+/- 0.0032)
+INFO:__main__:  F1-Macro: 0.6145 (+/- 0.0179)
+INFO:__main__:
+INFO:__main__:TEST SET PERFORMANCE
+INFO:__main__:----------------------------------------
+INFO:__main__:XGBoost_Tuned:
+INFO:__main__:  Accuracy: 0.9489
+INFO:__main__:  Precision (macro): 0.8854
+INFO:__main__:  Recall (macro): 0.7513
+INFO:__main__:  F1-Score (macro): 0.8037
+INFO:__main__:  F1-Score (weighted): 0.9475
+INFO:__main__:  Training Time: 560.78s
+INFO:__main__:
+INFO:__main__:XGBoost:
+INFO:__main__:  Accuracy: 0.9467
+INFO:__main__:  Precision (macro): 0.8804
+INFO:__main__:  Recall (macro): 0.7504
+INFO:__main__:  F1-Score (macro): 0.8012
+INFO:__main__:  F1-Score (weighted): 0.9452
+INFO:__main__:  Training Time: 283.48s
+INFO:__main__:
+INFO:__main__:Deep Learning:
+INFO:__main__:  Accuracy: 0.9463
+INFO:__main__:  Precision (macro): 0.7822
+INFO:__main__:  Recall (macro): 0.7243
+INFO:__main__:  F1-Score (macro): 0.7499
+INFO:__main__:  F1-Score (weighted): 0.9452
+INFO:__main__:  Training Time: 0.00s
+INFO:__main__:
+INFO:__main__:Random Forest_Tuned:
+INFO:__main__:  Accuracy: 0.9362
+INFO:__main__:  Precision (macro): 0.9029
+INFO:__main__:  Recall (macro): 0.6120
+INFO:__main__:  F1-Score (macro): 0.6921
+INFO:__main__:  F1-Score (weighted): 0.9315
+INFO:__main__:  Training Time: 784.14s
+INFO:__main__:
+INFO:__main__:Random Forest:
+INFO:__main__:  Accuracy: 0.9355
+INFO:__main__:  Precision (macro): 0.8984
+INFO:__main__:  Recall (macro): 0.6090
+INFO:__main__:  F1-Score (macro): 0.6889
+INFO:__main__:  F1-Score (weighted): 0.9308
+INFO:__main__:  Training Time: 429.39s
+INFO:__main__:
+INFO:__main__:Logistic Regression_Tuned:
+INFO:__main__:  Accuracy: 0.9309
+INFO:__main__:  Precision (macro): 0.7917
+INFO:__main__:  Recall (macro): 0.7640
+INFO:__main__:  F1-Score (macro): 0.7767
+INFO:__main__:  F1-Score (weighted): 0.9293
+INFO:__main__:  Training Time: 4693.94s
+INFO:__main__:
+INFO:__main__:Logistic Regression:
+INFO:__main__:  Accuracy: 0.9288
+INFO:__main__:  Precision (macro): 0.7746
+INFO:__main__:  Recall (macro): 0.6774
+INFO:__main__:  F1-Score (macro): 0.7199
+INFO:__main__:  F1-Score (weighted): 0.9258
+INFO:__main__:  Training Time: 23.16s
+INFO:__main__:
+INFO:__main__:KNN:
+INFO:__main__:  Accuracy: 0.9079
+INFO:__main__:  Precision (macro): 0.7761
+INFO:__main__:  Recall (macro): 0.5872
+INFO:__main__:  F1-Score (macro): 0.6349
+INFO:__main__:  F1-Score (weighted): 0.9024
+INFO:__main__:  Training Time: 606.23s
+INFO:__main__:
+INFO:__main__:Naive Bayes:
+INFO:__main__:  Accuracy: 0.7857
+INFO:__main__:  Precision (macro): 0.5159
+INFO:__main__:  Recall (macro): 0.5380
+INFO:__main__:  F1-Score (macro): 0.4468
+INFO:__main__:  F1-Score (weighted): 0.8022
+INFO:__main__:  Training Time: 0.17s
+INFO:__main__:
+INFO:__main__:CLUSTERING ANALYSIS
+INFO:__main__:----------------------------------------
+INFO:__main__:KMeans_ARI: 0.0143
+INFO:__main__:KMeans_Silhouette: 0.0465
+INFO:__main__:DBSCAN_ARI: 0.0005
+INFO:__main__:DBSCAN_Silhouette: 0.6190
+INFO:__main__:
+INFO:__main__:RECOMMENDATIONS
+INFO:__main__:----------------------------------------
+INFO:__main__:Best performing model: XGBoost_Tuned
+INFO:__main__:Best test accuracy: 0.9489
+INFO:__main__:Excellent performance achieved!
+INFO:__main__:
+INFO:__main__:================================================================================
+INFO:__main__:Detailed report saved as ml_pipeline_report_20250804_090553.txt
+INFO:__main__:Making enhanced prediction for new job description...
+INFO:__main__:Top predictions:
+INFO:__main__:  1. other (confidence: 0.9859136939048767)
+INFO:__main__:  2. Software Development / Engineering (confidence: 0.01198543794453144)
+INFO:__main__:  3. IT / Systems Engineering (confidence: 0.0014511124463751912)
+INFO:__main__:
+ Total Enhanced Pipeline Execution Time: 69255.56 seconds
+INFO:__main__:Enhanced ML Pipeline Completed Successfully!
+INFO:__main__:Check generated files for detailed results and visualizations
